@@ -1,0 +1,105 @@
+h1 {
+
+	color: #fff;
+}
+body, html {
+
+	margin: 0;
+	padding: 0;
+
+}
+
+body {
+
+	background: url(./img/nen.gif) no-repeat center center fixed;
+	background-size: cover;
+}
+img {
+ 
+ width: 120px;
+ height: 120px;
+
+}
+header {
+	margin-bottom: 30em;
+	
+	text-align:center;
+	display:flex;
+	flex-direction:row;
+	align-items:center;
+}
+header > img {
+	width: 15em;
+	height: 15em;
+	border-radius: 100%;
+	border: 2px solid #fff;
+	box-shadow: bisque 0px 2px 8px 0px; 
+}
+header > h1 {
+	display: inline-block;
+	font-size: 3em;
+	font-weight:700;
+	border-radius: 3em;
+	background-color:bisque;
+	color:black;
+	padding: 0.3em 0.6em;
+	border: 2px solid #fffa;
+}
+*{
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.game{
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid blue;
+    width: 1000px;
+    height: 700px;
+    perspective: 1000px;
+}
+
+.card{
+    width: 25%;
+    height: 33.33%;
+    position: relative;
+    border: 2px solid blueviolet;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .5s;
+}
+
+.card:active{
+    transform: scale(0.97);
+    transition: transform .2s;
+}
+
+.frontface,.backface{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border: 2px solid olive;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: palegreen;
+    backface-visibility: hidden;
+
+
+}
+
+.frontface{
+    transform: rotateY(180deg);
+
+}
+
+/* //utility class */
+.card.flip{
+    transform: rotateY(180deg);
+}
